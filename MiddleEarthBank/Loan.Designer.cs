@@ -53,7 +53,7 @@
             this.Welcome.AutoSize = true;
             this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Welcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Welcome.Location = new System.Drawing.Point(50, 33);
+            this.Welcome.Location = new System.Drawing.Point(49, 33);
             this.Welcome.Name = "Welcome";
             this.Welcome.Size = new System.Drawing.Size(136, 29);
             this.Welcome.TabIndex = 0;
@@ -229,6 +229,7 @@
             this.Name = "Loan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loan";
+            this.Load += new System.EventHandler(this.Loan_Load);
             this.PersonalInformation.ResumeLayout(false);
             this.PersonalInformation.PerformLayout();
             this.LoanDetails.ResumeLayout(false);

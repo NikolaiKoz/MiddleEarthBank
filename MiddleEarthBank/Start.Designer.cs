@@ -67,7 +67,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(120, 129);
+            this.label2.Location = new System.Drawing.Point(236, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 25);
             this.label2.TabIndex = 2;
@@ -76,7 +76,7 @@
             // name
             // 
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(259, 133);
+            this.name.Location = new System.Drawing.Point(375, 166);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(174, 22);
             this.name.TabIndex = 3;
@@ -87,9 +87,9 @@
             this.BtnApllyLoan.BackColor = System.Drawing.Color.SaddleBrown;
             this.BtnApllyLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnApllyLoan.ForeColor = System.Drawing.Color.White;
-            this.BtnApllyLoan.Location = new System.Drawing.Point(259, 207);
+            this.BtnApllyLoan.Location = new System.Drawing.Point(375, 240);
             this.BtnApllyLoan.Name = "BtnApllyLoan";
-            this.BtnApllyLoan.Size = new System.Drawing.Size(140, 63);
+            this.BtnApllyLoan.Size = new System.Drawing.Size(140, 65);
             this.BtnApllyLoan.TabIndex = 4;
             this.BtnApllyLoan.Text = "Apply for LOAN";
             this.BtnApllyLoan.UseVisualStyleBackColor = false;

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiddleEarthBank
 {
-    public partial class Form1 : Form
+    public partial class Loan : Form
     {
-        public Form1()
+        public Loan()
         {
             InitializeComponent();
         }

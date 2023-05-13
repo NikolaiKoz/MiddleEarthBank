@@ -27,9 +27,37 @@ namespace MiddleEarthBank
             BtnApllyLoan.Enabled = false;
         }
 
+        private void BtnControl()
+        {
+            if (name.Text.Trim() != string.Empty && name.Text.All(Char.IsLetter))
+            {
+                BtnApllyLoan.Enabled = true;
+                errorProvider1.SetError(name, "You must enter your name");
+            }
+            else
+            {
+                if (!(name.Text.All(Char.IsLetter)))
+                {
+                    errorProvider1.SetError(name, "The name must only contain letters");
+                }
+                else
+                {
+                    errorProvider1.SetError(name, "You must enter your name");
+                }
+                BtnApllyLoan.Enabled = false;
+                name.Focus();
+            }
+        }
+
         private void name_TextChanged(object sender, EventArgs e)
         {
             BtnControl();
+        }
+
+        private void BtnApllyLoan_Click(object sender, EventArgs e)
+        {
+            using (Loan LoanWindow = new Loan(name.Text))
+                LoanWindow.ShowDialog();
         }
     }
 }

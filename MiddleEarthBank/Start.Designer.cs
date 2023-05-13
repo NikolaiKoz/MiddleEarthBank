@@ -93,6 +93,7 @@
             this.BtnApllyLoan.TabIndex = 4;
             this.BtnApllyLoan.Text = "Apply for LOAN";
             this.BtnApllyLoan.UseVisualStyleBackColor = false;
+            this.BtnApllyLoan.Click += new System.EventHandler(this.BtnApllyLoan_Click);
             // 
             // BtnExit
             // 

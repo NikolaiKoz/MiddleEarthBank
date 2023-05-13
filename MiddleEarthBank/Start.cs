@@ -26,5 +26,10 @@ namespace MiddleEarthBank
         {
             BtnApllyLoan.Enabled = false;
         }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+            BtnControl();
+        }
     }
 }

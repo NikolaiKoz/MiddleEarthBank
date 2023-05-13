@@ -80,6 +80,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(174, 22);
             this.name.TabIndex = 3;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // BtnApllyLoan
             // 

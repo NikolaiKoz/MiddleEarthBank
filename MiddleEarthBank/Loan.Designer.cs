@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loan));
             this.Welcome = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,8 +45,10 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.Dues = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.PersonalInformation.SuspendLayout();
             this.LoanDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Welcome
@@ -70,6 +73,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnConfirm
             // 
@@ -82,6 +86,7 @@
             this.BtnConfirm.TabIndex = 2;
             this.BtnConfirm.Text = "Confirm";
             this.BtnConfirm.UseVisualStyleBackColor = false;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // label1
             // 
@@ -210,6 +215,10 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Loan amount:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Loan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +243,7 @@
             this.PersonalInformation.PerformLayout();
             this.LoanDetails.ResumeLayout(false);
             this.LoanDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +266,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label Dues;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

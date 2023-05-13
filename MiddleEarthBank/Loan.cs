@@ -66,5 +66,37 @@ namespace MiddleEarthBank
                 Birdthplace.Items.Add(places[i]);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        double calcularInteres()
+        {
+            int cuotas_pedidas = (int)comboBox3.SelectedItem;
+            string raza_seleccionada = Race.SelectedItem.ToString().ToLower();
+            string lugar_seleccionado = Birdthplace.SelectedItem.ToString().ToLower();
+            double interes = intereses[cuotas_pedidas];
+
+            if (new[] { "orco", "ent", "eladrin" }.Contains(raza_seleccionada))
+            {
+                interes += 0.3;
+            }
+
+            if (new[] { "rivendell", "tirion", "hobbiton" }.Contains(lugar_seleccionado))
+            {
+                interes -= 0.3;
+            }
+            return interes;
+        }
+
+        private void BtnConfirm_Click(object sender, EventArgs e)
+        {
+            //https://www.youtube.com/watch?v=lY1Z0Hgo288&ab_channel=Programaci%C3%B3nDesdeCero
+            /*
+             Faltan la ultima validacion. Continuar desde el minuto 1.10.00
+             */
+        }
     }
 }

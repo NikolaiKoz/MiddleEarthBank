@@ -21,5 +21,10 @@ namespace MiddleEarthBank
         {
             this.Close();
         }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+            BtnApllyLoan.Enabled = false;
+        }
     }
 }

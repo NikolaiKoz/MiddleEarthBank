@@ -122,7 +122,7 @@
             this.Birdthplace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Birdthplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Birdthplace.FormattingEnabled = true;
-            this.Birdthplace.Location = new System.Drawing.Point(114, 110);
+            this.Birdthplace.Location = new System.Drawing.Point(114, 96);
             this.Birdthplace.Name = "Birdthplace";
             this.Birdthplace.Size = new System.Drawing.Size(121, 21);
             this.Birdthplace.TabIndex = 3;
@@ -132,7 +132,7 @@
             this.Race.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Race.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Race.FormattingEnabled = true;
-            this.Race.Location = new System.Drawing.Point(114, 19);
+            this.Race.Location = new System.Drawing.Point(114, 33);
             this.Race.Name = "Race";
             this.Race.Size = new System.Drawing.Size(121, 21);
             this.Race.TabIndex = 2;
@@ -142,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(20, 109);
+            this.label4.Location = new System.Drawing.Point(20, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 18);
             this.label4.TabIndex = 1;
@@ -153,7 +153,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(56, 22);
+            this.label3.Location = new System.Drawing.Point(56, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 18);
             this.label3.TabIndex = 0;
@@ -173,7 +173,7 @@
             // 
             // LoanAmount
             // 
-            this.LoanAmount.Location = new System.Drawing.Point(132, 19);
+            this.LoanAmount.Location = new System.Drawing.Point(132, 36);
             this.LoanAmount.Name = "LoanAmount";
             this.LoanAmount.Size = new System.Drawing.Size(100, 20);
             this.LoanAmount.TabIndex = 3;
@@ -183,7 +183,7 @@
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(111, 118);
+            this.comboBox3.Location = new System.Drawing.Point(111, 96);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 2;
@@ -193,7 +193,7 @@
             this.Dues.AutoSize = true;
             this.Dues.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dues.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Dues.Location = new System.Drawing.Point(53, 121);
+            this.Dues.Location = new System.Drawing.Point(53, 99);
             this.Dues.Name = "Dues";
             this.Dues.Size = new System.Drawing.Size(52, 18);
             this.Dues.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(15, 19);
+            this.label5.Location = new System.Drawing.Point(15, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 18);
             this.label5.TabIndex = 0;

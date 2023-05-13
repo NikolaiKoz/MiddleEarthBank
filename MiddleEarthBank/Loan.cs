@@ -12,9 +12,14 @@ namespace MiddleEarthBank
 {
     public partial class Loan : Form
     {
-        public Loan()
+        string clientName;
+        string[] races = { "Hobbit", "Elfo", "Enano", "Humano", "Mago", "Orco", "Ent", "Eladrin" };
+        int[] installmentCounts = { 6, 12, 18, 24, 36 };
+
+        public Loan(string name)
         {
             InitializeComponent();
+            clientName = name;
         }
 
     }

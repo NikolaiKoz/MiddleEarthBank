@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -97,6 +98,53 @@ namespace MiddleEarthBank
             /*
              Faltan la ultima validacion. Continuar desde el minuto 1.10.00
              */
+
+            switch (validaciones())
+            {
+                case 0:
+                    {
+                        errorProvider1.SetError(DatosPersonales, "");
+                        errorProvider1.SetError(DatosPrestamo, "");
+                        double interes_mensual = calcularInteres();
+                        double monto_pedido = double.Parse(monto.Text);
+                        int cuotas_pedidas = (int)cuotas.SelectedItem;
+                        double interes_total = monto_pedido * (interes_mensual / 100) * cuotas_pedidas;
+                        double monto_a_pagar = monto_pedido + interes_total;
+                        string mensaje = "Su préstamo por " + monto_pedido + " en " + cuotas_pedidas + " cuotas se concederá con un interés del " + interes_mensual + "% mensual.\nEl monto final asciende a " + monto_a_pagar;
+                        MessageBoxButtons botones = MessageBoxButtons.OK;
+                        MessageBox.Show(mensaje, "Cálculo de intereses", botones);
+                        break;
+                    }
+                case 1:
+                    {
+                        errorProvider1.SetError(DatosPersonales, "Debe completar todos los datos personales");
+                        errorProvider1.SetError(DatosPrestamo, "");
+                        break;
+                    }
+                case 2:
+                    {
+                        errorProvider1.SetError(DatosPrestamo, "Debe ingresar un monto numérico y una cantidad de cuotas");
+                        errorProvider1.SetError(DatosPersonales, "");
+                        break;
+                    }
+            }
+
+            int validaciones()
+            {
+                if ((razas.SelectedIndex <= -1) || (lugares.SelectedIndex <= -1))
+                {
+                    return 1;
+                }
+                else
+                {
+                    if (!(monto.Text.All(Char.IsDigit)) || (monto.Text == "") || (cuotas.SelectedIndex <= -1))
+                    {
+                        return 2;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
         }
-    }
-}

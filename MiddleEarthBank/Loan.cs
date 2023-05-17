@@ -25,7 +25,7 @@ namespace MiddleEarthBank
             clientName = name;
 
             string placesList = Properties.Resources.lugares.ToString();
-            places = placesList.Split(new[] {"/r/n"}, StringSplitOptions.RemoveEmptyEntries);
+            places = placesList.Split(new[] { "/r/n" }, StringSplitOptions.RemoveEmptyEntries);
 
             intereses = new Dictionary<int, double>();
             int i;
@@ -62,7 +62,7 @@ namespace MiddleEarthBank
 
         void popularCity()
         {
-            for(int i = 0; i < places.Length; i++)
+            for (int i = 0; i < places.Length; i++)
             {
                 Birdthplace.Items.Add(places[i]);
             }
@@ -103,11 +103,11 @@ namespace MiddleEarthBank
             {
                 case 0:
                     {
-                        errorProvider1.SetError(DatosPersonales, "");
-                        errorProvider1.SetError(DatosPrestamo, "");
+                        errorProvider1.SetError(PersonalInformation, "");
+                        errorProvider1.SetError(LoanDetails, "");
                         double interes_mensual = calcularInteres();
-                        double monto_pedido = double.Parse(monto.Text);
-                        int cuotas_pedidas = (int)cuotas.SelectedItem;
+                        double monto_pedido = double.Parse(LoanAmount.Text);
+                        int cuotas_pedidas = (int)comboBox3.SelectedItem;
                         double interes_total = monto_pedido * (interes_mensual / 100) * cuotas_pedidas;
                         double monto_a_pagar = monto_pedido + interes_total;
                         string mensaje = "Su préstamo por " + monto_pedido + " en " + cuotas_pedidas + " cuotas se concederá con un interés del " + interes_mensual + "% mensual.\nEl monto final asciende a " + monto_a_pagar;
@@ -117,27 +117,27 @@ namespace MiddleEarthBank
                     }
                 case 1:
                     {
-                        errorProvider1.SetError(DatosPersonales, "Debe completar todos los datos personales");
-                        errorProvider1.SetError(DatosPrestamo, "");
+                        errorProvider1.SetError(PersonalInformation, "Debe completar todos los datos personales");
+                        errorProvider1.SetError(LoanDetails, "");
                         break;
                     }
                 case 2:
                     {
-                        errorProvider1.SetError(DatosPrestamo, "Debe ingresar un monto numérico y una cantidad de cuotas");
-                        errorProvider1.SetError(DatosPersonales, "");
+                        errorProvider1.SetError(LoanDetails, "Debe ingresar un monto numérico y una cantidad de cuotas");
+                        errorProvider1.SetError(PersonalInformation, "");
                         break;
                     }
             }
 
             int validaciones()
             {
-                if ((razas.SelectedIndex <= -1) || (lugares.SelectedIndex <= -1))
+                if ((Race.SelectedIndex <= -1) || (Birdthplace.SelectedIndex <= -1))
                 {
                     return 1;
                 }
                 else
                 {
-                    if (!(monto.Text.All(Char.IsDigit)) || (monto.Text == "") || (cuotas.SelectedIndex <= -1))
+                    if (!(LoanAmount.Text.All(Char.IsDigit)) || (LoanAmount.Text == "") || (comboBox3.SelectedIndex <= -1))
                     {
                         return 2;
                     }
@@ -148,3 +148,5 @@ namespace MiddleEarthBank
                 }
             }
         }
+    }
+}

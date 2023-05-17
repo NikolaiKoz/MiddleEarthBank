@@ -27,27 +27,49 @@ namespace MiddleEarthBank
             BtnApllyLoan.Enabled = false;
         }
 
+        //private void BtnControl()
+        //{
+        //    if (name.Text.Trim() != string.Empty && name.Text.All(Char.IsLetter))
+        //    {
+        //        BtnApllyLoan.Enabled = true;
+        //        errorProvider1.SetError(name, "You must enter your name");
+        //    }
+        //    else
+        //    {
+        //        if (!(name.Text.All(Char.IsLetter)))
+        //        {
+        //            errorProvider1.SetError(name, "The name must only contain letters");
+        //        }
+        //        else
+        //        {
+        //            errorProvider1.SetError(name, "You must enter your name");
+        //        }
+        //        BtnApllyLoan.Enabled = false;
+        //        name.Focus();
+        //    }
+        //}
+
         private void BtnControl()
         {
-            if (name.Text.Trim() != string.Empty && name.Text.All(Char.IsLetter))
+            if (string.IsNullOrWhiteSpace(name.Text))
             {
-                BtnApllyLoan.Enabled = true;
                 errorProvider1.SetError(name, "You must enter your name");
-            }
-            else
-            {
-                if (!(name.Text.All(Char.IsLetter)))
-                {
-                    errorProvider1.SetError(name, "The name must only contain letters");
-                }
-                else
-                {
-                    errorProvider1.SetError(name, "You must enter your name");
-                }
                 BtnApllyLoan.Enabled = false;
                 name.Focus();
             }
+            else if (!name.Text.All(Char.IsLetter))
+            {
+                errorProvider1.SetError(name, "The name must only contain letters");
+                BtnApllyLoan.Enabled = false;
+                name.Focus();
+            }
+            else
+            {
+                errorProvider1.SetError(name, string.Empty);
+                BtnApllyLoan.Enabled = true;
+            }
         }
+
 
         private void name_TextChanged(object sender, EventArgs e)
         {

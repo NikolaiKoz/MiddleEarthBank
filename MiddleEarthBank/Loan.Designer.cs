@@ -117,6 +117,7 @@
             this.PersonalInformation.Controls.Add(this.Race);
             this.PersonalInformation.Controls.Add(this.label4);
             this.PersonalInformation.Controls.Add(this.label3);
+            this.errorProvider1.SetIconAlignment(this.PersonalInformation, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.PersonalInformation.Location = new System.Drawing.Point(57, 122);
             this.PersonalInformation.Name = "PersonalInformation";
             this.PersonalInformation.Size = new System.Drawing.Size(266, 167);

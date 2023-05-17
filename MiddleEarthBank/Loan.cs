@@ -25,7 +25,7 @@ namespace MiddleEarthBank
             clientName = name;
 
             string placesList = Properties.Resources.lugares.ToString();
-            places = placesList.Split(new[] { "/r/n" }, StringSplitOptions.RemoveEmptyEntries);
+            places = placesList.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             intereses = new Dictionary<int, double>();
             int i;
@@ -147,6 +147,11 @@ namespace MiddleEarthBank
                     }
                 }
             }
+        }
+
+        private void Birdthplace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

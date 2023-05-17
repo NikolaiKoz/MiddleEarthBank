@@ -131,6 +131,7 @@
             this.Birdthplace.Name = "Birdthplace";
             this.Birdthplace.Size = new System.Drawing.Size(121, 21);
             this.Birdthplace.TabIndex = 3;
+            this.Birdthplace.SelectedIndexChanged += new System.EventHandler(this.Birdthplace_SelectedIndexChanged);
             // 
             // Race
             // 
